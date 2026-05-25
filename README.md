@@ -1,9 +1,28 @@
-##
-Analysis of Alvarado Lagon System (ALS)
+# Analysis of the Alvarado Lagoon System (ALS)
 
-a_data_preparation takes the .rds files to compose the dataset for the analysis.
+This repository contains the data pipeline and statistical analysis evaluating the impact of land use changes on fishery productivity within the Alvarado Lagoon System. 
 
-b_prodvslanduse loads the data frame and the effect of land use on fishery productivity is tested using lmer package
-random effect models.
+## 📋 Table of Contents
+* [Project Overview](#project-overview)
+* [Structure & Workflow](#structure--workflow)
+* [Prerequisites](#prerequisites)
+* [Results](#results)
 
-results of modeling effort are further discribe in model.pdf
+---
+
+## 🔬 Project Overview
+The objective of this analysis is to model how different land use patterns affect regional fishery productivity over time. Using linear mixed-effects models, we account for both fixed environmental/agricultural predictors and random time-series or group-level variations.
+
+## 🛠 Structure & Workflow
+
+The analysis is structured to run sequentially:
+
+1. **`a_data_preparation.R`** Processes the raw `.rds` data files, handles data cleaning/interpolation, and constructs the unified dataset required for modeling.
+   
+2. **`b_prodvslanduse.R`** Loads the prepared dataframe and estimates the effects of land use on fishery productivity. The statistical framework utilizes random effects models via the `lmerTest` package.
+
+## 📦 Prerequisites
+
+To run these scripts, you will need **R** installed along with the following packages:
+```R
+install.packages(c("lmerTest", "tidyverse"))
