@@ -1,6 +1,6 @@
 ##
 Analysis of Alvarado Lagon System (ALS)
 
-The EDA file get data from pesca.rds
+a. Data preparation takes the .rds files to compose the dataset for the analysis
 
-A Mixed egffects regression model was performed to analyze how land use change affects teh productivity of fisheries in ALS.
+b. The dat frame is used to model the eefct of land use over fishery production.
